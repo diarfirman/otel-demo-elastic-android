@@ -1,0 +1,13 @@
+# Copy this file to local.properties and fill in the values.
+# local.properties is git-ignored and should never be committed.
+
+# Elastic APM Server URL (from Elastic Cloud or self-managed APM Server)
+elastic.apm.serverUrl=https://YOUR_APM_SERVER.apm.gcp.elastic-cloud.com
+
+# Elastic APM Secret Token (from APM Server configuration)
+elastic.apm.secretToken=YOUR_SECRET_TOKEN
+
+# URL of the OpenTelemetry Demo frontend proxy
+# For Android Emulator pointing to the host machine, use http://10.0.2.2:8080
+# For a real device or Kubernetes deployment, use the actual external IP
+frontendProxyUrl=http://10.0.2.2:8080

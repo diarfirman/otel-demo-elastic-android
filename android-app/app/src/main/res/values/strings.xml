@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">OTel Demo Shop</string>
+    <string name="product_list_title">Telescope Shop</string>
+    <string name="cart_title">Shopping Cart</string>
+    <string name="checkout_title">Checkout</string>
+    <string name="add_to_cart">Add to Cart</string>
+    <string name="place_order">Place Order</string>
+    <string name="empty_cart">Your cart is empty</string>
+    <string name="empty_cart_subtitle">Browse our telescopes and add some to your cart</string>
+    <string name="order_success_title">Order Placed!</string>
+    <string name="order_success_message">Your order has been placed successfully.\nOrder ID: %s</string>
+    <string name="ok">OK</string>
+    <string name="error_loading_products">Failed to load products. Please try again.</string>
+    <string name="error_adding_to_cart">Failed to add item to cart.</string>
+    <string name="error_placing_order">Failed to place order. Please try again.</string>
+    <string name="added_to_cart">Added to cart!</string>
+    <string name="total">Total</string>
+    <string name="checkout">Checkout</string>
+    <string name="currency">Currency</string>
+    <string name="email">Email</string>
+    <string name="street_address">Street Address</string>
+    <string name="city">City</string>
+    <string name="state">State</string>
+    <string name="country">Country</string>
+    <string name="zip_code">ZIP Code</string>
+    <string name="credit_card_info">Credit Card (Demo)</string>
+    <string name="continue_shopping">Continue Shopping</string>
+</resources>

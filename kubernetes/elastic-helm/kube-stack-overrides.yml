@@ -63,6 +63,11 @@ collectors:
                   span.name == "router" and
                   span.attributes["upstream_cluster"] != nil
 
+                # Set peer.service from upstream_cluster so Elastic APM service map draws the edge
+                - set(span.attributes["peer.service"], span.attributes["upstream_cluster"]) where
+                  resource.attributes["service.name"] == "frontend-proxy" and
+                  span.attributes["upstream_cluster"] != nil
+
                 # NORMALIZE HIGH-CARDINALITY PATTERNS (frontend-proxy)
                 - replace_pattern(span.name, "/api/products/[A-Za-z0-9]+", "/api/products/{productId}") where
                   resource.attributes["service.name"] == "frontend-proxy" and
@@ -78,6 +83,8 @@ collectors:
                 - set(span.name, Concat([span.attributes["http.method"], " ", span.attributes["http.route"]], "")) where
                   span.attributes["http.route"] != nil and
                   span.attributes["http.method"] != nil
+      exporters:
+        debug: {}
       service:
         pipelines:
           traces:
