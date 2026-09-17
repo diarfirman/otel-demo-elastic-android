@@ -24,7 +24,7 @@ jobs:
         sudo docker builder prune -a
 
     - name: Checkout
-      uses: actions/checkout@v4
+      uses: actions/checkout@v7
 
     - name: Set up Docker Compose
       uses: docker/setup-compose-action@v1
@@ -39,7 +39,7 @@ jobs:
       uses: helm/kind-action@v1
     
     - name: Set up helm
-      uses: azure/setup-helm@v4.3.0
+      uses: azure/setup-helm@v5.0.1
 
     - name: Install bashunit
       run: |
